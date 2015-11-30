@@ -1,0 +1,16 @@
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\Bin\Debug\ApplicationIcon.png
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\Bin\Debug\Background.png
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\Bin\Debug\ControleFinanceiro.dll
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\Bin\Debug\ControleFinanceiro.pdb
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\Bin\Debug\AppManifest.xaml
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\Bin\Debug\ControleFinanceiro.xap
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\App.g.i.cs
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\View\CadUsuario.g.i.cs
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\View\Movimento.g.i.cs
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\View\MainPage.g.i.cs
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\View\Principal.g.i.cs
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\View\Relatorio.g.i.cs
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.g.resources
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.dll
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\ControleFinanceiro.pdb
+C:\Users\Abner\Dropbox\Especialização\3º Semestre\PWP\ControleFinanceiro\ControleFinanceiro\obj\Debug\XapCacheFile.xml
