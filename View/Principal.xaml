@@ -29,15 +29,26 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <StackPanel Height="218" HorizontalAlignment="Left" Margin="9,8,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="435">
-                <TextBlock Height="30" Name="textBlock1" Text="Resumo das finanças" HorizontalAlignment="Center" />
+                <TextBlock Height="30" Name="textBlock1" Text="Resumo das finanças" HorizontalAlignment="Center"  FontSize="25" FontWeight="Bold" />
                 <TextBlock Height="30" Name="textBlock2" Text="Saldo Atual" Width="376" />
                 <TextBox Height="72" Name="txtSaldo" Text="" Width="400" IsEnabled="False" TextAlignment="Center" />
-                <Button Content="Relatório Completo" Height="72" Name="button1" Width="396" />
+                <Button Content="Relatório Geral" Height="72" Name="btnRelatorioGeral" Width="394" Click="btnRelatorioGeral_Click" />
             </StackPanel>
             <Button Content="Sair" Height="72" HorizontalAlignment="Left" Margin="295,530,0,0" Name="btnSair" VerticalAlignment="Top" Width="160" Click="btnSair_Click" />
+            <!--StackPanel Height="100" HorizontalAlignment="Left" Margin="9,444,0,0" Name="stackPanel3" VerticalAlignment="Top" Width="436">
+                <ListBox Height="100" Name="ListaBanco" Width="410" >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid x:Name="LayoutRoot" Height="100" Width="400">
+                                <TextBlock Height="45" HorizontalAlignment="Left" Name="txtNome" Text="{Binding Nome}" VerticalAlignment="Top" Width="300" FontSize="30" FontWeight="Bold" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel-->
         </Grid>
-        <StackPanel Height="208" HorizontalAlignment="Left" Margin="20,242,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="436" Grid.Row="1">
-            <TextBlock Height="30" Name="textBlock3" Text="Cadastrar" HorizontalAlignment="Center" />
+        <StackPanel Height="192" HorizontalAlignment="Left" Margin="20,242,0,0" Name="stackPanel2" VerticalAlignment="Top" Width="436" Grid.Row="1">
+            <TextBlock Height="30" Name="textBlock3" Text="Cadastrar" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold" />
             <Button Content="Receitas" Height="72" Name="btnReceitas" Width="398" Click="btnReceitas_Click" />
             <Button Content="Despesas" Height="72" Name="btnDespesas" Width="398" Click="btnDespesas_Click" />
         </StackPanel>

@@ -34,7 +34,7 @@
                 <TextBlock Height="30" Name="textBlock2" Text="Valor" Width="404" />
                 <TextBox Height="72" Name="txtValor" InputScope="Digits" Text="" Width="428" />
                 <TextBlock Height="30" Name="textBlock3" Text="Data" Width="402" />
-                <TextBox Height="72" Name="txtData" InputScope="Digits" Text="" Width="430" />
+                <TextBox Height="72" Name="txtData" Text="" Width="430" />
                 <Button Content="Enviar" Height="72" Name="btnEnviar" Width="426" Click="btnEnviar_Click" />
             </StackPanel>
             <Button Content="Sair" Height="72" HorizontalAlignment="Left" Margin="296,530,0,0" Name="btnSair" VerticalAlignment="Top" Width="160" Click="btnSair_Click" />

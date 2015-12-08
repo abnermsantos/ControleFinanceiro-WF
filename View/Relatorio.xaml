@@ -23,16 +23,28 @@
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
             <TextBlock x:Name="ApplicationTitle" Text="Controle Financeiro" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="Extrato Mensal" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="PageTitle" Text="Extrato" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <Button Content="Sair" Height="72" HorizontalAlignment="Left" Margin="298,530,0,0" Name="btnSair" VerticalAlignment="Top" Width="160" Click="btnSair_Click" />
         </Grid>
-        <StackPanel Height="514" HorizontalAlignment="Left" Margin="20,10,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="438" Grid.Row="1" />
+        <StackPanel Height="514" HorizontalAlignment="Left" Margin="20,10,0,0" Name="stackPanel1" VerticalAlignment="Top" Width="438" Grid.Row="1">
+            <ListBox Height="500" Name="ListaBanco" Width="410">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid x:Name="LayoutRoot" Height="100" Width="400" >
+                            <TextBlock Height="40" HorizontalAlignment="Left" Name="txtTerceiro" Text="{Binding Terceiro}" VerticalAlignment="Top" Width="300" FontSize="25" FontWeight="Bold"  Foreground="Green"/>
+                            <TextBlock Height="30" HorizontalAlignment="Left" Margin="0,50,0,0" Name="txtData" Text="{Binding Data}" VerticalAlignment="Top" FontSize="20" Width="100" />
+                            <TextBlock Height="30" HorizontalAlignment="Right" Margin="0,50,0,0" Name="txtValor" Text="{Binding Valor}" VerticalAlignment="Top" FontSize="20" Width="100" />
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
     </Grid>
- 
+    
     <!--Sample code showing usage of ApplicationBar-->
     <!--<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">

@@ -12,6 +12,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using ControleFinanceiro.Model;
+using ControleFinanceiro.Control;
 
 namespace ControleFinanceiro.View
 {
@@ -39,27 +40,33 @@ namespace ControleFinanceiro.View
                     usuario.nome = login;
                     usuario.senha = senha;
 
-                    //Armazena os dados do Usuário enquanto logado
-                    varLogin["login"] = usuario.nome;
-                    varLogin["senha"] = usuario.senha;
-
                     //cadastra no banco de dados
+                    try
+                    {
+                        inserirUsuário();
+                        MessageBox.Show("Usuário cadastrado com sucesso.");
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Erro ao inserir dados no banco.");
+                    }
 
-                    //vai para a tela principal
-                    NavigationService.Navigate(new Uri("/Principal.xaml", UriKind.Relative));
+                    //Armazena os dados do Usuário enquanto logado
+                    //varLogin["login"] = usuario.nome;
+                    //varLogin["senha"] = usuario.senha;
 
+                    //vai para a tela de login
+                    NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
                 }
                 else
                 {
                     MessageBox.Show("Senhas não conferem.");
                 }
-
             }
             else
             {
                 MessageBox.Show("Preencha os campos corretamente.");
             }
-
         }
 
         //Método para confirmar senha
@@ -77,5 +84,19 @@ namespace ControleFinanceiro.View
             return verifica;
         }
 
+        //Método para cadastrar Usuário no Banco de Dados
+        private void inserirUsuário()
+        {
+            using (var conexao = new BancoDados())
+            {
+                if (!conexao.DatabaseExists())
+                {
+                    conexao.CreateDatabase();
+                }
+                Usuario u = new Usuario() { nome = txtUsuario.Text, senha = txtSenha.Password };
+                conexao.usuarios.InsertOnSubmit(u);
+                conexao.SubmitChanges();
+            }
+        }
     }
 }

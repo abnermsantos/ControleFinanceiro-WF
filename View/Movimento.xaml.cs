@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using ControleFinanceiro.Model;
 using System.IO.IsolatedStorage;
+using ControleFinanceiro.Control;
 
 namespace ControleFinanceiro.View
 {
@@ -60,7 +61,7 @@ namespace ControleFinanceiro.View
             NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
         }
 
-        //Cadastrar Despesa
+        //Cadastrar Movimentação
         private void btnEnviar_Click(object sender, RoutedEventArgs e)
         {
             if (txtValor.Text != "" && txtData.Text != "" && txtLocal.Text != "")
@@ -68,19 +69,41 @@ namespace ControleFinanceiro.View
                 movimentacao.data = txtData.Text;
                 movimentacao.terceiro = txtLocal.Text;
                 movimentacao.valor = double.Parse(txtValor.Text);
-                movimentacao.usuario = (string)varLogin["login"];
+                movimentacao.usuario = (Int32)varLogin["id"];
 
                 //Cadastra no Banco de Dados
+                try
+                {
+                    inserirMovimento();
+                    MessageBox.Show("Dados cadastrados com sucesso");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Erro ao inserir dados no banco.");
+                }
+                
 
                 //Retorna para a tela anterior
-                NavigationService.Navigate(new Uri("/Principal.xaml", UriKind.Relative));
+                NavigationService.Navigate(new Uri("/View/Principal.xaml", UriKind.Relative));
             }
             else
             {
                 MessageBox.Show("Preencha os campos corretamente.");
             }
+        }
 
-            
+        //Método para cadastrar movimento no Banco de Dados
+        private void inserirMovimento()
+        {
+            using (var conexao = new BancoDados())
+            {
+                if (!conexao.DatabaseExists())
+                {
+                    conexao.CreateDatabase();
+                }
+                conexao.movimentos.InsertOnSubmit(movimentacao);
+                conexao.SubmitChanges();
+            }
         }
     }
 }
